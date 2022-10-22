@@ -1,23 +1,29 @@
-import logo from './logo.svg';
+
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import NavBar from './Profile/NavBar';
+import FullName from './Profile/FullName';
+import Bio from './Profile/Bio';
+import Profession from './Profile/Profession';
+
 
 function App() {
+    const handleEvent = () => {
+      alert(`${this.props.FullName}`);
+    };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div id="home"><NavBar /></div>
+      
+      <FullName firstName="Arij" lastName="BEL HAJ AMOR"/>
+      <br/> <br/> <br/>
+      <div id="bio"><Bio FullName="BEL HAJ AMOR Arij" Age="25" Gender="Female" 
+      Interests="Practice sports ,Taking care of animals, Watching Films" /></div>
+      <br/> <br/> <br/>
+      <div id="profession"><Profession/></div>
+      <button onClick={handleEvent}>User</button>
+      
+
     </div>
   );
 }
