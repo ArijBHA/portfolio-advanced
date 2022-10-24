@@ -81,12 +81,11 @@ box-shadow: 0 0 30px aqua;
   
 }
 /* profession */
-.card{
+.footer{
   background-color: black;
+  text-align: center;
 }
-.card-text {
-  text-decoration-color:black;
-}
-.card-title{
-  text-decoration: solid;
+.prof {
+  background-color:black;
+  text-align: center;
 }

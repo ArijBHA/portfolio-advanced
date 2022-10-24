@@ -1,31 +1,33 @@
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavBar from './Profile/NavBar';
-import FullName from './Profile/FullName';
-import Bio from './Profile/Bio';
-import Profession from './Profile/Profession';
+import Profile from './component/profil/Profile';
 
+import Footer from './component/profil/Footer';
+import NavBar from './component/profil/NavBar';
+import FullName from './component/profil/FullName';
 
 function App() {
-    const handleEvent = () => {
-      alert(`${this.props.FullName}`);
-    };
+ const handleName=(name)=>{alert(name)}
+  var prof = {
+     fullName :"BEL HAJ AMOR Arij",
+     bio : "I am 25 Y.O years old, I like sleeping",
+     profession: "student"
+  }
   return (
-    <div className="App">
-      <div id="home"><NavBar /></div>
-      
-      <FullName firstName="Arij" lastName="BEL HAJ AMOR"/>
-      <br/> <br/> <br/>
-      <div id="bio"><Bio FullName="BEL HAJ AMOR Arij" Age="25" Gender="Female" 
-      Interests="Practice sports ,Taking care of animals, Watching Films" /></div>
-      <br/> <br/> <br/>
-      <div id="profession"><Profession/></div>
-      <button onClick={handleEvent}>User</button>
-      
-
-    </div>
+   <div className='App'>
+    <NavBar/>
+    <FullName />
+     <Profile fullName={prof.fullName} bio={prof.bio} profession={prof.profession} handleName={handleName} >
+      <div>
+        <img src='download.jpg' >
+        </img>
+         </div>
+     </Profile>
+     <Footer/>
+   </div>
   );
-}
+} 
+
 
 export default App;

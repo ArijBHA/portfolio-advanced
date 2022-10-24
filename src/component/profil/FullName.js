@@ -1,5 +1,5 @@
 // export default function FullName (){
-    const fullName = (props) => {
+    const FullName = (props) => {
        
         console.log(props);
     return(
@@ -14,12 +14,15 @@
             </div>
         </div>
          
-        <h3 style={{color:"gray", textAlign:"right"}} >  {props.firstName} {props.lastName}
+        <h3 style={{color:"gray", textAlign:"right"}} >  BEL HAJ AMOR Arij
         </h3>
 
         </div>
         
 
+
+
+        
     )
 }
-export default fullName;
+export default FullName;
